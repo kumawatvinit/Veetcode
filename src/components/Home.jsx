@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 const announcements = [
     {
@@ -13,9 +14,10 @@ const announcements = [
 
 const List = [
     {
-        title: "t747 posted From 1430 to Guardian (2239) - My One Year Journey!",
-        description: "Weekly Contest 254 will be start at 2021-08-01 12:00:00",
-        time: "2021-08-01 12:00:00",
+        id: 124322,
+        user: "t747",
+        title: "From 1430 to Guardian (2239) - My One Year Journey!",
+        time: new Date("2023-06-21 15:32:25"),
         content: `After 59 contests I have finally achieved my goal of becoming a Guardian on Leetcode! I have spent hundreds of hours on this platform practicing problems, and the feeling of achievement couldn't be greater. Here is an overview of my journey to Guardian.
 
         Discovering / Beginning Leetcode
@@ -42,24 +44,232 @@ const List = [
         Final Thoughts
         This one year journey has been extremely rewarding and I am so much more confident in my programming skills now than I was one year ago. I believe that almost anyone with adequate dedication can reach Guardian. There will be plateaus and even periods of decline, but you will always continue to improve with meaningful practice. Whether you are passionate in competitive programming or simply trying to brush up on your algorithmic skills, I wish you good luck in your problem solving!`,
     },
+    {
+        id: 453233,
+        user: "mayankr053",
+        title: "Alphagrep securities",
+        time: new Date("2023-06-22 20:07:25"),
+        content: `Education :- M.Tech tier 1
+        Prior Experience :- Intel
+        Current comp :- 27 lakhs
+        YOE :- 4
+        Company :- Alphagrep securities
+        Level :- Senior Analyst (c++ developer)
+        Salary :- 50 lakhs + 10 lakhs guarenteed bonus + 5 lakhs joining`,
+    },
+    {
+        id: 324535,
+        user: "Anonymous User",
+        title: "Saas labs SDE-1",
+        time: new Date("2023-06-22 17:19:03"),
+        content: `Education : BTech from tier 1 college
+        Date of offer : September,2022
+        Date of Joining: June,2023
+        Type : On campus
+        Experience: 0 years
+        Company : Saas Labs
+        Title: SDE-1
+        Base : 15L
+        Joining Bonus: 1.5L
+        Retention Bonus: 3.5L
+        ESOPS: 5L
+        Total Compensation : 25L
+        First Year Compensation : 16.5L
+        Annual Bonus: Aditional to the Compensation
+        Benefits :100% Remote,standard employee benefits`,
+    },
+    {
+        id: 453233,
+        user: "mayankr053",
+        title: "Alphagrep securities",
+        time: new Date("2023-06-22 20:07:25"),
+        content: `Education :- M.Tech tier 1
+        Prior Experience :- Intel
+        Current comp :- 27 lakhs
+        YOE :- 4
+        Company :- Alphagrep securities
+        Level :- Senior Analyst (c++ developer)
+        Salary :- 50 lakhs + 10 lakhs guarenteed bonus + 5 lakhs joining`,
+    },
+    {
+        id: 324535,
+        user: "Anonymous User",
+        title: "Saas labs SDE-1",
+        time: new Date("2023-06-22 17:19:03"),
+        content: `Education : BTech from tier 1 college
+        Date of offer : September,2022
+        Date of Joining: June,2023
+        Type : On campus
+        Experience: 0 years
+        Company : Saas Labs
+        Title: SDE-1
+        Base : 15L
+        Joining Bonus: 1.5L
+        Retention Bonus: 3.5L
+        ESOPS: 5L
+        Total Compensation : 25L
+        First Year Compensation : 16.5L
+        Annual Bonus: Aditional to the Compensation
+        Benefits :100% Remote,standard employee benefits`,
+    },
+    {
+        id: 453233,
+        user: "mayankr053",
+        title: "Alphagrep securities",
+        time: new Date("2023-06-22 20:07:25"),
+        content: `Education :- M.Tech tier 1
+        Prior Experience :- Intel
+        Current comp :- 27 lakhs
+        YOE :- 4
+        Company :- Alphagrep securities
+        Level :- Senior Analyst (c++ developer)
+        Salary :- 50 lakhs + 10 lakhs guarenteed bonus + 5 lakhs joining`,
+    },
+    {
+        id: 324535,
+        user: "Anonymous User",
+        title: "Saas labs SDE-1",
+        time: new Date("2023-06-22 17:19:03"),
+        content: `Education : BTech from tier 1 college
+        Date of offer : September,2022
+        Date of Joining: June,2023
+        Type : On campus
+        Experience: 0 years
+        Company : Saas Labs
+        Title: SDE-1
+        Base : 15L
+        Joining Bonus: 1.5L
+        Retention Bonus: 3.5L
+        ESOPS: 5L
+        Total Compensation : 25L
+        First Year Compensation : 16.5L
+        Annual Bonus: Aditional to the Compensation
+        Benefits :100% Remote,standard employee benefits`,
+    },
+    {
+        id: 453233,
+        user: "mayankr053",
+        title: "Alphagrep securities",
+        time: new Date("2023-06-22 20:07:25"),
+        content: `Education :- M.Tech tier 1
+        Prior Experience :- Intel
+        Current comp :- 27 lakhs
+        YOE :- 4
+        Company :- Alphagrep securities
+        Level :- Senior Analyst (c++ developer)
+        Salary :- 50 lakhs + 10 lakhs guarenteed bonus + 5 lakhs joining`,
+    },
+    {
+        id: 324535,
+        user: "Anonymous User",
+        title: "Saas labs SDE-1",
+        time: new Date("2023-06-22 17:19:03"),
+        content: `Education : BTech from tier 1 college
+        Date of offer : September,2022
+        Date of Joining: June,2023
+        Type : On campus
+        Experience: 0 years
+        Company : Saas Labs
+        Title: SDE-1
+        Base : 15L
+        Joining Bonus: 1.5L
+        Retention Bonus: 3.5L
+        ESOPS: 5L
+        Total Compensation : 25L
+        First Year Compensation : 16.5L
+        Annual Bonus: Aditional to the Compensation
+        Benefits :100% Remote,standard employee benefits`,
+    },
 ]
+
+function calculateTime(time) {
+    const now = new Date();
+    let diff = 0;
+    if(now < time) {
+        diff = time - now;
+    } else {
+        diff = now - time;
+    }
+    
+    const seconds = Math.floor(diff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    if (now < time) {
+        if (days > 0) {
+            if(days === 1) 
+                return "in a day";
+            return "in " + days + " days";
+        }
+        if (hours > 0) {
+            if(hours === 1)
+                return "in an hour";
+            return "in " + hours + " hours";
+        }
+        if (minutes > 0) {
+            if(minutes === 1)
+                return "in a minute";
+            return "in " + minutes + " minutes";
+        }
+        return "in " + seconds + " seconds";
+    }
+    
+
+    if (days > 0) {
+        if(days === 1) 
+            return "a day ago";
+        return days + " days ago";
+    } else if (hours > 0) {
+        if(hours === 1)
+            return "an hour ago";
+        return hours + " hours ago";
+    } else if (minutes > 0) {
+        return minutes + " minutes ago";
+    } else {
+        return seconds + " seconds ago";
+    }
+}
 
 function Announcement({title, time}) {
     return (
+        <div className="item">
         <tr>
             <td>
-                <p>Join our Contest <strong>{title}</strong></p>
-                <p>{time.toString()}</p>
+                <p className="since">{calculateTime(time)}</p>
+                <h5>Join our Contest <a href="http://localhost:5173/contest">{title}</a></h5>
             </td>
         </tr>
+        </div>
     );
+}
+
+function Blogs({id, user, title, time, content}) {
+    const words = content.split(' ');
+    let description = words.slice(0, 30).join(' ');
+
+    return (
+        <div className="item">
+        <tr>
+            <td>
+                <p className="since">{calculateTime(time) }</p>
+                <h5>
+                    <a href={"http://localhost:5173/"+user}>{user}</a>
+                    {' '}Posted{' '}
+                    <a href={"http://localhost:5173/discuss/topic/"+id}>{title}</a>
+                </h5>
+                <p>{description}...</p>
+            </td>
+        </tr>
+        </div>
+    )
 }
 
 
 
 function Home() {
     return (
-        <>
+        <div className="home-blog-list">
             <h3><i>BE HAPPY:) you are HOME!</i></h3>
 
             <table>
@@ -67,10 +277,25 @@ function Home() {
                     <th><h2>Announcements</h2></th>
                 </thead>
                 <tbody>
-                    {announcements.map((announcement) => <Announcement{...announcement} />)}
+                    {announcements.map((announcement) => {
+                        return (
+                            <>
+                                <Announcement{...announcement} />
+                                <hr></hr>
+                            </>
+                        )
+                    } )}
+                    {List.map((blog) => {
+                        return (
+                            <>
+                                <Blogs{...blog} />
+                                <hr></hr>
+                            </>
+                        )
+                    } )}
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }
 

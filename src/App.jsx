@@ -25,17 +25,19 @@ function App() {
       <div id="container">
         <Navigation/>
 
-      <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        <Route path="/signIn" element={<SignIn/>}/>
-        <Route path="/signup" element={<Register/>}/>
-        <Route path="/explore" element={<Explore/>}/>
-        <Route path="/problems" element={<Problems/>}/>
-        <Route path="/interview" element={<Interview/>}/>
-        <Route path="/contest" element={<Contest/>}/>
-        <Route path="/discuss" element={<Discuss/>}/>
-        <Route path="/store" element={<Store/>}/>
-      </Routes>
+        <div className='content-container'>
+          <Routes>
+            <Route exact path="/" element={<Home/>}/>
+            <Route path="/signIn" element={<SignIn/>}/>
+            <Route path="/signup" element={<Register/>}/>
+            <Route path="/explore" element={<Explore/>}/>
+            <Route path="/problems" element={<Problems/>}/>
+            <Route path="/interview" element={<Interview/>}/>
+            <Route path="/contest" element={<Contest/>}/>
+            <Route path="/discuss" element={<Discuss/>}/>
+            <Route path="/store" element={<Store/>}/>
+          </Routes>
+        </div>
       </div>
     </Router>
   )

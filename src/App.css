@@ -5,8 +5,40 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    overflow: auto;
+}
+
+.Navigation {
+    position: fixed;
+    top: 0;
+    /* left: 50%;
+    max-width: 100%; */
+    width: max-content;
+    z-index: 999;
 }
 
 nav td{
     padding: 25px;
+}
+
+.item {
+    max-width: 38vw;
+    padding: 10px;
+}
+
+td h5, td p{
+    margin: 2px;
+}
+
+.since {
+    font-size: 0.8em;
+    color: grey;
+    margin: 0px;
+}
+
+.home-blog-list {
+    /* max-height: 100vh;
+    overflow: auto; */
+    max-height: calc(100vh - 80px);
+    /* overscroll-behavior: contain; */
 }

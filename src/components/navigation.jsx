@@ -4,7 +4,7 @@ import '../App.css'
 
 function Navigation() {
     return (
-        <nav className='Navigation'>
+        <nav className='navigation'>
             <table>
                 <tr>
                    <td><Link to="/explore">Explore</Link></td> 

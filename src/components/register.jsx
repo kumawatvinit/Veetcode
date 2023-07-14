@@ -1,8 +1,10 @@
 import React from "react";
+import Navigation from "./navigation";
 
 function register() {
     return (
         <>
+            <Navigation/>
             <h1>LeetCode</h1>
             
             <div id="register">

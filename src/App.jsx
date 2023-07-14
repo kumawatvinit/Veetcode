@@ -10,11 +10,11 @@ import SignIn from './components/SignIn'
 import Register from './components/register'
 import Explore from './components/Explore'
 import Problems from './components/Problems'
+import Showproblem from './components/showproblem'
 import Interview from './components/Interview'
 import Contest from './components/Contest'
 import Discuss from './components/Discuss'
 import Store from './components/Store'
-import Navigation from './components/navigation'
 
 
 
@@ -23,7 +23,6 @@ function App() {
   return (
     <Router>
       <div id="container">
-        <Navigation/>
 
         <div className='content-container'>
           <Routes>
@@ -32,6 +31,7 @@ function App() {
             <Route path="/signup" element={<Register/>}/>
             <Route path="/explore" element={<Explore/>}/>
             <Route path="/problems" element={<Problems/>}/>
+            <Route path="/showproblem" element={<Showproblem/>}/>
             <Route path="/interview" element={<Interview/>}/>
             <Route path="/contest" element={<Contest/>}/>
             <Route path="/discuss" element={<Discuss/>}/>

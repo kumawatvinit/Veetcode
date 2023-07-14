@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from 'react'
+import Navigation from "./navigation";
 
 const problems1= [
     {
@@ -79,6 +80,7 @@ const problems1= [
   
     return (
       <>
+      <Navigation/>
   
       <div>
         <table>
@@ -118,7 +120,7 @@ const problems1= [
         <tr>
           <td>{title}</td>
           <td>{acceptance}</td>
-          <td style={{color: difficulty==="Hard"? "red": (difficulty==="Easy"? "green": "yellow")}}>{difficulty}</td>
+          <td style={{color: difficulty==="Hard"? "rgba(255,55,95,1)": (difficulty==="Easy"? "rgb(0, 184, 163)": "rgb(255, 192, 30)")}}>{difficulty}</td>
         </tr>
       </>
     )

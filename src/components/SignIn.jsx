@@ -1,12 +1,16 @@
 import React from "react";
+import Navigation from "./navigation";
 
 function SignIn() {
     return (
         <>
-            <h1>Sign In</h1>
+        <Navigation/>
             
             <div id="sign-in">
                 <table>
+                  <thead>
+                    <th><h1>Sign In</h1></th>
+                  </thead>
                   <tr>
                     <td><input type="email" placeholder="Username or E-mail" /></td>
                   </tr>

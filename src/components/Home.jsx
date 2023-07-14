@@ -1,6 +1,9 @@
 import React from "react";
 import "../App.css";
 
+import Navigation from "./navigation";
+import Showproblem from "./showproblem";
+
 const announcements = [
     {
         title: "Biweekly Contest 107",
@@ -269,9 +272,13 @@ function Blogs({id, user, title, time, content}) {
 
 function Home() {
     return (
+        <>
+        <Navigation/>
+        <Showproblem/>
         <div className="home-blog-list">
-            <h3><i>BE HAPPY:) you are HOME!</i></h3>
 
+            <h3><i>BE HAPPY:) you are HOME!</i></h3>
+            <br></br>
             <table>
                 <thead>
                     <th><h2>Announcements</h2></th>
@@ -296,6 +303,7 @@ function Home() {
                 </tbody>
             </table>
         </div>
+        </>
     );
 }
 
